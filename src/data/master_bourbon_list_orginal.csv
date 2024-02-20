@@ -1,0 +1,4 @@
+bourbon_name,min_corn,max_corn,min_wheat,max_wheat,min_rye,max_rye,min_barley,max_barley,proof,min_age,max_age,rating
+Blanton's Single Barrel,75,75,0,0,12,15,10,13,93,6,8,8
+Blanton's Gold,75,75,0,0,12,15,10,13,103,6,8,10
+Buffalo Trace,75,75,0,0,0,10,15,25,90,6,8,9

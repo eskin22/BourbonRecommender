@@ -1,0 +1,5 @@
+# ignore credentials
+src/data/credentials
+
+#ignore all cache
+__pycache__
