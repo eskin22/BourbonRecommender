@@ -1,7 +1,7 @@
 
 import praw
 
-from helpers import get_credentials
+from src.__classes__.helpers import get_credentials
 
 class RedditScraper():
     def __init__(self):
