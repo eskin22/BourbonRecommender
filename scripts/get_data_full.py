@@ -79,12 +79,28 @@ for i, bourbon_name in enumerate(bourbons):
                 bar()
 
         # save the results
-        note_parser.save_results(bourbon_name)
+        note_parser.save_results(bourbon_name, 'info')
         transformed_data = Visualizer.transform_data(note_parser.notes)
         figure = Visualizer.create_notes_chart(transformed_data)
+        fig = figure['figure']
+        Visualizer.save_chart(figure, 'breakdown')
+
+        # diff = {}
+
+        # for key in note_parser.notes.keys():
+        #     if key == 'bourbon_name':
+        #         diff[key] = note_parser.notes[key]
+        #     else:
+        #         diff[key] = note_parser.notes[key] - notes_overall[key]
+
+        # note_parser.notes = diff
+        # note_parser.save_results(bourbon_name, 'difference_from_mean')
+
+
+        # transformed_data = Visualizer.transform_data(diff)
+        # figure = Visualizer.create_notes_chart(transformed_data)
         # fig = figure['figure']
-        # fig.show()
-        Visualizer.save_chart(figure)
+        # Visualizer.save_chart(figure, 'difference_from_mean')
     except:
         print(f"Failed to analyze {bourbon_name}...continuing...")
         time.sleep(2)

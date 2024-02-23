@@ -21,7 +21,7 @@ from src.__classes__.__visualizer__ import Visualizer
 
 #TODO add the name of the bourbon you're interested in
 # bourbon_name = "Blanton's Original Single Barrel"
-bourbon_name = "Jack Daniel's 10"
+bourbon_name = "Knob Creek 9 Small Batch"
 
 #* Read in the links for the reddit reviews of the given bourbon
 print("Reading in data...")
@@ -79,19 +79,19 @@ figure = Visualizer.create_notes_chart(transformed_data)
 fig = figure['figure']
 Visualizer.save_chart(figure, 'breakdown')
 
-diff = {}
+# diff = {}
 
-for key in note_parser.notes.keys():
-    if key == 'bourbon_name':
-        diff[key] = note_parser.notes[key]
-    else:
-        diff[key] = note_parser.notes[key] - notes_overall[key]
+# for key in note_parser.notes.keys():
+#     if key == 'bourbon_name':
+#         diff[key] = note_parser.notes[key]
+#     else:
+#         diff[key] = note_parser.notes[key] - notes_overall[key]
 
-note_parser.notes = diff
-note_parser.save_results(bourbon_name, 'difference_from_mean')
+# note_parser.notes = diff
+# note_parser.save_results(bourbon_name, 'difference_from_mean')
 
 
-transformed_data = Visualizer.transform_data(diff)
-figure = Visualizer.create_notes_chart(transformed_data)
-fig = figure['figure']
-Visualizer.save_chart(figure, 'difference_from_mean')
+# transformed_data = Visualizer.transform_data(diff)
+# figure = Visualizer.create_notes_chart(transformed_data)
+# fig = figure['figure']
+# Visualizer.save_chart(figure, 'difference_from_mean')

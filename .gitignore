@@ -3,3 +3,6 @@ src/data/credentials
 
 #ignore all cache
 __pycache__
+
+# ignore all saved data for bourbons
+data/bourbons
